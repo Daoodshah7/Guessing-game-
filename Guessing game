@@ -1,0 +1,18 @@
+import random 
+
+
+def guess(x):
+    random_number = random.randint(1, x ) # so this gives the bounder for where you can pick the number
+    guess = 0 
+    while guess != random_number: # keep playing until you get it while guess is not random number 
+        guess = int(input(f'Guess a number betwwen 1 and {x}: ')) 
+        if guess < random_number: 
+            print('Sorry, guess again. Too low.') 
+
+        elif guess > random_number: 
+            print('Sorry, guess again. TOO high')
+
+    print(f'yay you did it got the right number {random_number}')
+
+
+guess(10)
